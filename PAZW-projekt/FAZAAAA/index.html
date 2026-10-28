@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt</title>
+    <link href="styl.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#zmienStrone").click(function() {
+            $("#stronaPierwsza").fadeOut(1000, function() {
+                $("#stronaDruga").fadeIn(2000).removeClass("d-none");
+                });
+        });
+        $("#zmienStrone1").click(function() {
+            $("#stronaDruga").fadeOut(1000, function() {
+                $("#stronaDruga1").fadeIn(2000).removeClass("d-none");
+                });
+        });
+        $("#zmienStrone2").click(function() {
+            $("#stronaDruga").fadeOut(1000, function() {
+                $("#stronaDruga2").fadeIn(2000).removeClass("d-none");
+                });
+        });
+        $("#zmienStrone3").click(function() {
+        $("#stronaDruga").fadeOut(1000, function() {
+            $("#stronaDruga3").fadeIn(2000).removeClass("d-none");
+            });
+        });
+        $("#zmienStrone4").click(function() {
+        $("#stronaDruga").fadeOut(1000, function() {
+            $("#stronaDruga4").fadeIn(2000).removeClass("d-none");
+            });
+        });
+        $("#zmienStrone5").click(function() {
+        $("#stronaDruga").fadeOut(1000, function() {
+            $("#stronaDruga5").fadeIn(2000).removeClass("d-none");
+            });
+        });
+        $("#zmienStrone6").click(function() {
+        $("#stronaDruga").fadeOut(1000, function() {
+            $("#stronaDruga6").fadeIn(2000).removeClass("d-none");
+            });
+        });
+        $(".powr").click(function() {
+        $("#stronaDruga").fadeIn(100, function() {
+            $("#stronaDruga1").addClass("d-none");
+            $("#stronaDruga2").addClass("d-none");
+            $("#stronaDruga3").addClass("d-none");
+            $("#stronaDruga4").addClass("d-none");
+            $("#stronaDruga5").addClass("d-none");
+            $("#stronaDruga6").addClass("d-none");
+            $("#stronaDruga").removeClass("d-none").fadeIn(3000);
+            });
+        });
+    });
+    </script>
+</head>
+<body data-bs-theme="dark">
+    <header class="navbar navbar-expand-lg bd-navbar sticky-top">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container-fluid">
+                <h1 class="navbar-brand">Trepang2 lore</h1>
+                <li class="nav-item">
+                <a href="https://github.com/Kowaak/PAZW-projekt" style="margin-left: 5px; " class="btn btn-primary float-end"><img height="24px" width="24px" alt="Github" src="img/github-mark-white.svg"></a>
+                <button class="btn btn-primary" id="motyw_toggle"><img id="motyw" height="24px" width="24px" alt="Zmiana motywu" src="motyw_ciemny.png"></button>
+                <script>
+                    const motyw_toggle = document.getElementById('motyw_toggle');
+                    const motyw_zdjecie = document.getElementById("motyw")
+                    motyw_toggle.addEventListener('click', () => {
+                        document.body.dataset.bsTheme = document.body.dataset.bsTheme === 'dark' ? 'light' : 'dark';
+                        var motyw_src = motyw_zdjecie.getAttribute('src');
+                        if (motyw_src == "motyw_jasny.png"){
+                            motyw_zdjecie.setAttribute('src','motyw_ciemny.png');
+                            motyw_src = motyw_zdjecie.getAttribute('src');
+                        }else {
+                            motyw_zdjecie.setAttribute('src','motyw_jasny.png');
+                            motyw_src = motyw_zdjecie.getAttribute('src');
+                        }
+                    });
+                </script>
+                </li>
+            </div>
+        </nav>
+    </header>
+    <div id="stronaPierwsza" class="container-fluid" style="margin-top:80px">
+        <h1 class="tekst bg-body mx-auto d-block">Wstęp</h1>
+        <h2 class="tekst bg-body mx-auto d-block">Na tej stronie pokrótce opisze fabułę z gry <a href="https://www.trepang2game.com/">Trepang</a></h2>
+        <button id="zmienStrone" class="btn btn-primary btn-lg mx-auto d-block">Dalej</button>
+        <div id="demo" class="carousel slide mx-auto d-block" data-bs-ride="carousel" style="width: 1790px;">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner ">
+              <div class="carousel-item active">
+                <img src="img/jeden.gif" alt="gif 1" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="img/dwa.gif" alt="gif 2" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="img/trzy.gif" alt="gif 3" class="d-block w-100">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+    </div>
+    <div id="stronaDruga" class="d-none container-fluid" style="margin-top:80px">
+        <h1 class="tekst bg-body mx-auto d-block">Wszystko co najważniesze</h1>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card img-fluid" style="width:500px">
+                        <img class="card-img-top" src="img/obj14tlo.png" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="bg-body card-title">Placówka 14</h4>
+                            <button id="zmienStrone1" class="btn btn-primary">Przejdź</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card img-fluid" style="width:500px">
+                        <img class="card-img-top" src="img/pandoratlo.png" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title bg-body">Instytut Pandory</h4>
+                            <button id="zmienStrone2" class="btn btn-primary">Przejdź</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card img-fluid" style="width:500px">
+                        <img class="card-img-top" src="img/jorviktlo.png" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title bg-body">Zamek Jorvik</h4>
+                            <button id="zmienStrone3" class="btn btn-primary">Przejdź</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card img-fluid" style="width:500px">
+                        <img class="card-img-top" src="img/obj83tlo.jpg" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title bg-body">Placówka 83</h4>
+                            <button id="zmienStrone4" class="btn btn-primary">Przejdź</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card img-fluid" style="width:500px">
+                        <img class="card-img-top" src="img/hqtlo.png" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title bg-body">Siedziba Horizon</h4>
+                            <button id="zmienStrone5" class="btn btn-primary">Przejdź</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card img-fluid" style="width:500px">
+                        <img class="card-img-top" src="img/syntlo.png" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title bg-body">Placówka Syndykatu</h4>
+                            <button id="zmienStrone6" class="btn btn-primary">Przejdź</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="stronaDruga1" class="d-none container-fluid tlo-img1" style="margin-top:80px">
+        <div class="bg-body col-6 offset-3">
+        <h1 class="tekst bg-body mx-auto d-block">Placówka 14</h1>
+        <h2 class="tekst bg-body mx-auto d-block">Prolog</h3>
+        <h3 class="tekst bg-body mx-auto d-block">Zaczynasz związany na krześle wpatrzony w telewizor który hipnotyzuje twoją postac aż do momentu gdy zamaskowny 
+            żołnież w niego strzela. Wymykasz sie ze swojej celi i przekradasz się do pokoju z monitoringiem gdzie znajdujesz broń, klucz do kajdanek i 
+            ciała strażników. W placówce wybucha alarm, przez intekom wzywane są wszystkie jednoski do zatrzymania cie. Określają cię wtedy Obiektem 106. 
+            Przebijasz sie do labolatorium gdzie znajdujesz ciało człowieka który cię uwolnił, popełnił samobójstwo. Znajdujesz przy nim złoty token z wyrytymi 
+            na nim literami CV - 105. Po dojściu do hangaru walczysz z kilkoma składami jednostek korporacji Horizon. Po ich pokonaniu i wyjściu z placówki
+            czekają na ciebie jednostki Syndykatu, tajemniczej organizacji walczącej z megakorporacją. Nie strzelają do ciebie, zamiast tego lecisz z nimi 
+            do ich placówki.<br></h3>
+        <h2 class="tekst bg-body mx-auto d-block">Siedziba Syndykatu</h2>
+        <h3 class="tekst bg-body mx-auto d-block">Od tego momentu pracujesz dla Syndykatu a ich siedziba staje sie twoją bazą wypadową do której wracasz między kolejnymi misjami
+            <br><br><br><br></h3>
+        <button class="powr btn btn-primary mx-auto d-block">Powrót</button>
+    </div>
+        </div>
+        <div id="stronaDruga2" class="d-none container-fluid tlo-img2" style="margin-top:80px">
+            <div class="bg-body col-6 offset-3">
+            <h1 class="tekst bg-body mx-auto d-block">Instytut Pandory<br></h1>
+            <h2 class="tekst bg-body mx-auto d-block">Dr. Emmerson<br></h2>
+            <h3 class="tekst bg-body mx-auto d-block">Misja ma na celu odnalezienie Dr. Emmersona. Po przebiciu się do budynku Horizon zjeżdżasz windą do piwnic gdzie mieszczą się szpitale.
+            Znajdujesz tam wiele ciał na których eksperymentowano. Dowiadujesz się też że po labolatoriach grasuje groźny mutant stworzony przez korporacje. Po czasie odnajdujesz ciało doktora 
+                Znajdujesz przy nim złoty token z wyrytymi literami XCV - 95. Kiedy próbujesz wydostać się spod ziemi mutant atakuje cię. Po pokonaniu go misja się kończy.
+                <br><br><br><br><br><br><br><br></h3>
+            <button class="powr btn btn-primary mx-auto d-block">Powrót</button>
+        </div>
+    </div>
+    <div id="stronaDruga3" class="d-none container-fluid tlo-img3" style="margin-top:80px">
+        <div class="bg-body col-6 offset-3">
+        <h1 class="tekst bg-body mx-auto d-block">Zamek Jorvik</h1>
+        <h3 class="tekst bg-body mx-auto d-block">W tej misji zostajesz wysłany do zamku Jorvik który jest siedzibą kultu współpracującego z Horizon
+            by zdobyć informacje od Dr. Kramera i zabić Patriarche kultu. W trakcie misji Horizon zdradza kult by eskortować Kramera. Kult tworzy <cite>mięsnego golema</cite> by zabic oddziały Syndykatu i Horizon
+            W pewnym momencie trafiasz na arene gdzie walczysz z golemem a następnie z Patriarchą. Okazuje się że podobnie do ciebie ma on super siłe, wytrzymałość i szybkość. Po pokonaniu go dowiadujemy się że był podmiotem 91.
+        </h3>
+        <button class="powr btn btn-primary mx-auto d-block">Powrót</button>
+    </div>
+    </div>
+    <div id="stronaDruga4" class="d-none container-fluid tlo-img4" style="margin-top:80px">
+        <div class="bg-body col-6 offset-3">
+        <h1 class="tekst bg-body mx-auto d-block">Placówka 83</h1>
+        <h2 class="tekst bg-body mx-auto d-block">Opuszczona placówka</h2>
+        <h3 class="tekst bg-body mx-auto d-block">Wchodzsz do niej razem z 2 żołnieżami Syndykatu. Najpierw placówka wydaje się opuszczona i nie działa w niej nic poza radiowęzłem. Po przejściu kilku zabarykadowanych korytarzy oddzielasz się od sojuszników by przywrócić zasilianie. Chwile po odejściu słyszysz strzały. Gdy wrócisz na miejsce spotkania nie znajdujesz żołnieży, zamiast tego jedne z drzwi stoją otworem. 
+            Gdy przez nie przejdziesz zobaczysz coś w rodzaju zjawy która teleportuje cię do jednej z pobliskich toalet, gdzie na ścianach pisze <cite>Don't run</cite> czyli: Nie biegaj i <cite>They're blind</cite> czyli: Są ślepi.
+        W kolejnych pokojach wpadasz i wypadasz z backroomsów. Gdy dojdziesz do głównego pokoju placówki zobaczysz swoją drużynę koło dziwnego obelisku, chwilę później eksplodują. Musisz potem zniszczyć obelisk nazwany Podmiotem 83. By to zrobić przywracasz zasilanie do potężnego działa. Po trafieniu obelisk wybucha mocą porównywalną do małej bomby atomowej, na szczęście udaje ci się uciec poza obszar zagrożenia.<br><br><br><br><br><br><br></h3>
+        <button class="powr btn btn-primary mx-auto d-block">Powrót</button>
+    </div>
+    </div>
+    <div id="stronaDruga5" class="d-none container-fluid tlo-img5" style="margin-top:80px">
+        <div class="bg-body col-6 offset-3">
+        <h1 class="tekst bg-body mx-auto d-block">Siedziba Horizon</h1>
+        <h2 class="tekst bg-body mx-auto d-block">Szturm</h2>
+        <h3 class="tekst bg-body mx-auto d-block">Zaczynasz od przebicia się do wieży przez kanały. 
+            Podkładasz bomby i zostaje wydany rozkaz ataku. Ty i inne oddziały Syndykatu przebijacie się przez pierwsze kilka pięter aż do windy.</h3>
+        <h2 class="tekst bg-body mx-auto d-block">Walka z Antonem</h2>
+        <h3 class="tekst bg-body mx-auto d-block">Po przedostaniu się na najwyższe piętro stajesz do walki z Antonem, 
+            czyli dyrektorem generalnym firmy Horizon. Podczas potyczki wiele razy próbuje przesłać swoją świadomość do systemu. Przy śmierci mamrocze o przełamaniu cyklu<br><br><br><br><br><br><br></h3>
+        <button class="powr btn btn-primary mx-auto d-block">Powrót</button>
+    </div>
+    </div>
+    <div id="stronaDruga6" class="d-none container-fluid tlo-img6" style="margin-top:80px">
+        <div class="bg-body col-6 offset-3">
+        <h1 class="tekst bg-body mx-auto d-block">TF27 HQ</h1>
+        <h2 class="tekst bg-body mx-auto d-block">Zdrada Syndykatu</h2>
+        <h3 class="tekst bg-body mx-auto d-block">Po powrocie z siedziby Horizon gdy próbujesz wejść z powrotem do placówki Syndykatu zostajesz ogłuszony. Budzisz
+            się przywiązany do stołu gdzie trwają przygotowania do spalenia twojego ciała. Syndykat nie przewidział że się obudzisz więc łatwo obezwładniasz 
+            strażników. Zostaje wszczęty alarm a ty zaczynasz przebijać się do bomby termojądrowej placówki. Zarząd panikuje i rozkazuje natychmiastowo zacząć kolejny 
+            cykl (107), czyli szybko stworzyć kolejnego klona superżołnieża do wyeliminowania ciebie.
+        </h3>
+        <h2 class="tekst bg-body mx-auto d-block">Zwykłe zakończenie (złe)</h2>
+        <h3 class="tekst bg-body mx-auto d-block">Po pokonaniu Podmiotu 107, 106 detonuje bombe termojądrową znajdują się w placówce poświęcają się i niszcząc 
+            cały odłamek Syndykatu. To zakończenie jest uważane za złe ponieważ najprawdopodobniej Syndykat ma wiele innych placówek podobnych 
+            do tej którą zniszczyłeś więc może zacząć od nowa i z czasem odbudować się i wyeliminować błąd który sprawił że 106 mógł się im sprzeciwić</h3>
+        <h2 class="tekst bg-body mx-auto d-block">Sekretne zakończenie (dobre)</h2>
+        <h3 class="tekst bg-body mx-auto d-block">Podczas głównych misji można było znaleźć łącznie 7 dronów które dawały ci dostęp do wiadomości.
+            Oto one w kolejności ich dostania:<br><br>
+            1.<cite>The cycle begins again,<br><br>capture means you will be forced<br> to complete your Original Mission <br><br></cite>
+            Tłumaczenie: Cykl zaczyna się od nowa, przechwycenie oznacza, że będziesz zmuszony ukończyć swoją pierwotną misję<br><br>
+            2.<cite>It was never going to be a rescue mission...<br><br></cite>
+            Tłumaczenie: To nigdy nie miała byc misja ratunkowa...<br><br>
+            3.<cite>Deploying Subject 106 ag$%ins *@^je$# $@ is ill-advised<br>There's a possibility...[MESSEGE CORRUPTED]<br><br></cite>
+            Tłumaczenie: Wysłanie Podmiotu 106 ag$%ins *@^je$# $@ jest nie zalecane. Istnieje możliwość...[WIADOMOŚĆ USZKODZONA]<br><br>
+            4.<cite>She's not telling you everything.<br><br></cite>
+            Tłumaczenie: Ona nie mówi ci wszystkiego (w odniesieniu do kierowniczki placówki która kieruje tobą przez wszystkie misje)<br><br>
+            5.<cite>Your mission is nearing completion.<br><br>Will it end on your terms? Or theirs?<br><br></cite>
+            Tłumaczenie: Twoja misja dobiega końca. Czy zakończy się na Twoich warunkach? Albo ich?<br><br>
+            6.<cite> .....high probability of cognitive dissonance if 106 becomes involved in phase 1.<br>
+                Keep him in the underpass until phase 2 of the operation.<br>
+                The cycle is nearly complete, see to it finished correctly this time.<br><br></cite>
+            Tłumaczenie: .....wysokie prawdopodobieństwo dysonansu poznawczego, jeśli 106 zostanie zaangażowany w fazę 1. Trzymaj go w przejściu podziemnym aż do drugiej fazy operacji. Cykl jest prawie ukończony, dopilnuj, aby tym razem zakończył się poprawnie.<br><br>
+            7.<cite>THERE IS NO EXTRACTION<br>
+                DESTROY THE FACILITY<br>YOU WILL BE REMEMBERED<br><br>BREAK THE CYCLE<br><br></cite>
+            Tłumaczenie: NIE MA EKSTRAKCJI<br><br> ZNISZCZ PLACÓWKĘ<BR>BĘDZIESZ ZAPAMIĘTANY<BR>PRZERWIJ CYKL<br><br>
+            W tym zakończeniu tak jak wcześniej 106 wysadza placówkę, jednak tym razem tuż przed śmiercią udaje mu się zgrac jego podświadomośc do systemu 
+            Syndykatu. To zakończenie jest uważane za dobre ponieważ Syndykat nie da rady się odbudować nawet w innych miejscach jeśli każdy ich <cite>cykl</cite> 
+            będzie się kończył sprzeciwem/buntem podmiotu.
+        </h3>
+        <button class="powr btn btn-primary mx-auto d-block">Koniec</button>
+    </div>
+    </div>
+</body>
+</html>

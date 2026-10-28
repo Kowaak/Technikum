@@ -1,0 +1,40 @@
+body {
+    transition: background-color 2s ease;
+}
+li{
+    list-style: none;
+}
+.tekst{
+    text-align: center;
+    transition: background-color 2s ease;
+}
+.tlo-img1{
+    background-image: url(img/obj14tlo.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.tlo-img2{
+    background-image: url(img/pandoratlo.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.tlo-img3{
+    background-image: url(img/jorviktlo.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.tlo-img4{
+    background-image: url(img/obj83tlo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.tlo-img5{
+    background-image: url(img/hqtlo.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.tlo-img6{
+    background-image: url(img/klony.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
